@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .container{
+            margin: 100px auto;
+            background-color: #408080;
+            width: 300px;
+            height: 300px;
+        }
+        .head{
+           overflow: hidden;
+        }
+        .head>li{
+            float: left;
+            width: 90px;
+            height: 50px;
+            margin-right: 10px;
+            background-color: #808080;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        .container>div{
+            width: 300px;
+            height: 270px;
+            background-color: #008040;
+            margin-bottom: 10px;
+            display: none;
+        }
+        ul .active{
+            background-color: #804040;
+        }
+        .container .select{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <ul class="head" id="head">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div>content1</div>
+        <div>content2</div>
+        <div>content3</div>
+    </div>
+    
+</body>
+<script>
+    var oul = document.getElementById("head");
+    var aLi = oul.getElementsByTagName('li');
+    var oDiv = document.getElementById("container");
+    var oDivContent = oDiv.getElementsByTagName('div');
+
+    /*先执行for时，循环绑定事件，当点击的时候才会执行function(),此时i为3,this代表对当前对象的引用  */
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index=i;
+        aLi[i].onclick=function(){
+            for(var j=0;j<aLi.length;j++)
+            {
+                aLi[j].className="";/*清空全部*/
+                oDivContent[j].className="";
+            }
+          /*   aLi[this.index]="active"; */
+            this.className="active";  /*要注意css样式的权重值  */
+            oDivContent[this.index].className="select";
+        }
+       
+
+        }
+
+
+
+</script>
+</html>
