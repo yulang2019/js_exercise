@@ -19,6 +19,7 @@
             height: 400px;
             position: relative;
             cursor: pointer;
+            overflow: hidden;
         }
         img{
             width: 700px;
@@ -26,6 +27,10 @@
             display: none;
 
         }
+        #box-image{
+            width: 4200px;
+        }
+
         #box-image .checked{
             display: block;
 
@@ -85,6 +90,7 @@
             <img src="../img/3.jpg" alt="">
             <img src="../img/4.webp" alt="">
             <img src="../img/5.jpg" alt="">
+            <img src="../img/1.webp" alt="">
         </div>
         <ul class="box-item" id="box-item">
             <li class="selected">1</li>
@@ -104,102 +110,19 @@
 
         var oDiv=document.getElementById("box-image");
         var aimg=oDiv.getElementsByTagName("img");
-       
+        
         var oNext=document.getElementById("next");
         var oLast=document.getElementById("last");
         var owrap=document.getElementById("wrap");
-      
-
-       /*  var aUlItem=document.getElementById("item-next");
-        var aLiItem=document.getElementsByTagName("li"); */
-        var nextIndex=0;
-        for(var i=0;i<aLi.length;i++)
-        {
-            aLi[i].index=i;
-            aLi[i].onclick=function(){
-            
-                change(this.index);
-               /*  aLi[this.index].className="selected";
-               /*  this.className="selected"; */
-                aimg[this.index].className="checked";//图片 */
-                nextIndex=this.index;
-            }
+        var iNow=0;
+        oNext.onclick=function(){
+            iNow++;
+            change(iNow);
         }
-            oNext.onclick=function(){
-                nextIndex++;
-                if(nextIndex==aLi.length){
-                    nextIndex=0;
-                }
-                change(nextIndex);
-            } 
-            oLast.onclick=function(){
-               
-                if(nextIndex==0)
-                {
-                    nextIndex=aLi.length;
-                }
-                nextIndex--;
-                change(nextIndex);
-            }
-            function change(index){
-                for(var t=0;t<aLi.length;t++)
-                {
-                    aLi[t].className="";
-                    aimg[t].className="";
-                }
-                aLi[index].className="selected";
-                aimg[index].className="checked";
-            }
-            var timer;
-            run();
-            owrap.onmouseover=function(){
-                clearInterval(timer);
-            }
-            owrap.onmouseout=function(){
-                run();
-            }
+        function change(num){
+            aimg.style.left=-num*750+"px";
 
-            function run(){
-                timer =setInterval(function(){
-                oNext.onclick();
-                },1000);
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /* 先获取当前页面图片的索引，再+1;到最后再设为初始值 */
-       /*  for(var i=0;i<aLiItem.length;i++)
-        {
-            var t;
-            aLiItem[i].onclick=function(){
-                for(var z=0;z<aimg.length;z++){
-                    if(aimg.className="checked")
-                    {
-                        t=z;
-                    }
-                }
-                console.log(t);
-            }
-
-        } */
-
-    
+        }
     </script>
     
 </body>
-</html>
