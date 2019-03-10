@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70d49acb-5f1b-447c-aae2-2b56426bd3ca" name="Default" comment="js的练习">
-      <change beforePath="$PROJECT_DIR$/js/test3轮播图2.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/test3轮播图2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/test4轮播图.html" beforeDir="false" />
-    </list>
+    <list default="true" id="70d49acb-5f1b-447c-aae2-2b56426bd3ca" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="test3轮播图2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/test3轮播图2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="123" column="20" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
+            <state relative-caret-position="93">
+              <caret line="89" column="12" lean-forward="true" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -60,9 +57,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="17" />
-    <option name="y" value="2" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-330" />
+    <option name="y" value="80" />
     <option name="width" value="1386" />
     <option name="height" value="688" />
   </component>
@@ -126,7 +123,7 @@
       <workItem from="1550576060258" duration="30000" />
       <workItem from="1550622246365" duration="442000" />
       <workItem from="1550887112965" duration="37000" />
-      <workItem from="1552183381080" duration="1395000" />
+      <workItem from="1552183381080" duration="1620000" />
     </task>
     <task id="LOCAL-00001" summary="js的练习">
       <created>1550622662779</created>
@@ -135,19 +132,32 @@
       <option name="project" value="LOCAL" />
       <updated>1550622662780</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="js的练习">
+      <created>1552184797130</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552184797130</updated>
+    </task>
+    <task id="LOCAL-00003" summary="js的练习">
+      <created>1552184864061</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552184864061</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1904000" />
+    <option name="totallyTimeSpent" value="2129000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-330" y="80" width="1386" height="688" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24925596" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24851632" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.36216217" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -186,8 +196,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/test3轮播图2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="123" column="20" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
+        <state relative-caret-position="93">
+          <caret line="89" column="12" lean-forward="true" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
         </state>
       </provider>
     </entry>
