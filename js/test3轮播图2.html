@@ -24,6 +24,10 @@
         #box-image{
             width: 4000px;
             height: 400px;
+            position: absolute;
+
+            /*transition: left 1s linear;*/
+            transition: transform 1s ease;
           
         }
        
@@ -72,7 +76,7 @@
             background-color: #008080;
             margin-right: 5px;
             color: #ffffff;
-            font-weight: 30;
+            font-weight:bold;
             font-size: 18px;
             text-align: center;
             line-height: 30px;
@@ -88,11 +92,11 @@
 <body>
     <div class="wrap" id="wrap">
         <div class="box-image" id="box-image">
-            <img src="img/1.webp" alt="" class="checked">
-            <img src="img/2.webp" alt="">
-            <img src="img/3.jpg" alt="">
-            <img src="img/4.webp" alt="">
-            <img src="img/5.jpg" alt="">
+            <img src="../img/1.webp" alt="" class="checked">
+            <img src="../img/2.webp" alt="">
+            <img src="../img/3.jpg" alt="">
+            <img src="../img/4.webp" alt="">
+            <img src="../img/5.jpg" alt="">
         </div>
         <ul class="box-item" id="box-item">
             <li class="selected">1</li>
@@ -107,28 +111,23 @@
         </ul>
     </div>
     <script>
-        var oUl=document.getElementById("box-item");
-        var aLi=oUl.getElementsByTagName("li");
-
-        var oDiv=document.getElementById("box-image");
-        var aimg=oDiv.getElementsByTagName("img");
-       
-        var oNext=document.getElementById("next");
-        var oLast=document.getElementById("last");
-        var owrap=document.getElementById("wrap");
-        for(var i=0;i<aLi.length;i++)
+        var aLi=document.getElementsByTagName("li");
+        var obox_image=document.getElementById("box-image");
+        for (var i=0;i<aLi.length;i++)
         {
             aLi[i].index=i;
-            var location=0;
             aLi[i].onclick=function(){
-                for(var j=0;j<aLi.length;j++)
-                {
+
+                for(var j=0;j<aLi.length;j++){
                     aLi[j].className="";
-                   
                 }
-                aLi[this.index].className="selected";
+                    aLi[this.index].className="selected";
+                // obox_image.style.left=-this.index*800+"px";
+                obox_image.style.transform="translateX(-"+this.index*800+"px)";
+
             }
         }
+
 
       
     
