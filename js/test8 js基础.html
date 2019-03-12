@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js</title>
+    <style>
+        .d{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        
+      /*   var num=prompt("w33");
+        if(!isNaN(num)){
+            alert("yes");
+        }
+        else{
+            alert("no");
+        } */
+       /*  number/string,boolean,null，undefined */
+      /*  var arr1=[1,23,"123"];
+       document.write(arr1+"<br>");
+       console.log(arr1);
+       var arr2=new Array();
+       document.write(arr2+"<br>");
+       var arr3=new Array(3);
+       document.write(arr3+"<br>");
+       var arr4=new Array(3,4,5);
+       document.write(arr4+"<br>");
+       console.log(arr4); */
+     /*   var person={
+           name:"wer",
+           age:12,
+          learn:function(){
+               console.log("hello");
+           }
+
+       }; */
+      /* console.log(person);
+      console.log(person.name);
+      console.log(person.age); */
+     /*  person.learn(); */
+     /*   console.log(person.learn());  undefined*/
+   /*   console.log(person['name']);
+     console.log(person['age']); */
+   /*  var product=[
+      
+       {
+           name:"衣服",
+           price:12,
+       }
+       
+    ];
+    for(var i=0;i<product.length;i++)
+    {
+        document.write("<li class='d'>"+product[i]["name"]+"</li>");
+        document.write("<li class='d'>"+product[i].name+"</li>");
+    } */
+   /*  var obj={
+        name:"w",
+        age:12,
+        code:function(){
+            document.write("s");
+        }
+    };
+    for(var i  in obj){
+        alert(i+"\n"+obj[i]);
+    } */
+   /*   a=5;
+    function foo(){
+        a=5;
+        document.write(a);
+    }
+    foo();
+    document.write(a); */
+   /*   var	 a=5;
+    var b=a;
+    a=6;
+    document.write(b+"<br>");
+    document.write(a);  */ 
+    var  obj1={
+        Name:"xx",
+        Age:15,
+    };
+    var obj2=obj1;
+    for(var i in obj2)
+    {
+        document.write(i+"1:"+obj2[i]+"<br>");
+    }
+    obj1.Name="a1";
+    for(var i in obj2){
+    document.write(i+"2:"+obj2[i]+"<br>");
+    }
+
+    
+    </script>
+</body>
+</html>
