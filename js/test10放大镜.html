@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>magnifying</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .little{
+            cursor: pointer;
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 400px;
+
+        }
+        .little img{
+           
+        }
+        .position{
+            width: 200px;
+            height: 200px;
+            background-color: #ffffff;
+            opacity: 0.4;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            display: none;
+            z-index: 1;
+            cursor:move;
+        }
+        .big{
+            float: left;
+            display: none;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        
+        }
+        .big img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+          
+           
+        }
+       
+    
+    </style>
+</head>
+<body>
+    <div class="little" id="little">
+        <img src="imgs/1.jpg"  alt="">
+        <div class="position" id="position"></div>
+    </div>
+    <div class="big" id="big">
+        <img src="imgs/2.jpg"  alt="" id="bigImg">
+        <script>
+            var olittle=document.getElementById("little");
+            var oposition=document.getElementById("position");
+            var obig=document.getElementById("big");
+            var obigImg=document.getElementById("bigImg"); 
+            olittle.onmouseover=function(e){
+                oposition.style.display="block";
+                obig.style.display="block";
+                /* 移动 */
+                olittle.onmousemove=function(e){
+                    var odivx=e.clientX-oposition.offsetWidth/2;
+                    var odivY=e.clientY-oposition.offsetHeight/2; 
+                    var maxX=olittle.offsetWidth-oposition.offsetWidth;
+                    var maxY=olittle.offsetHeight-oposition.offsetHeight;
+                    if(odivx<0){
+                        odivx=0;
+                    }
+                    if(odivY<0){
+                        odivY=0;
+                    }
+                    if(odivx>maxX){
+                    odivx=maxX;
+                    }
+                    if(odivY>maxY){
+                        odivY=maxY;
+                    }
+                    oposition.style.left= odivx+"px";
+                    oposition.style.top= odivY+"px";
+                   /*  obig.style.left=23+"px"; */
+                   /* 1position能走的最大距离 little的width-drug的width */
+                   var MaxOpositionX=olittle.offsetWidth-oposition.offsetWidth;
+                   var MaxOpositionY=olittle.offsetHeight-oposition.offsetHeight;
+                   /* 2大图走的最大距离 大图的width-框的宽度 */
+                    var MaxbigMaxX= obigImg.offsetWidth-obig.offsetWidth;
+                    var MaxbigMaxY= obigImg.offsetHeight-obig.offsetHeight;
+                   /*3求出drag 走的百分比*/
+                   var percentX=oposition.offsetLeft/MaxOpositionX;
+                   var percentY=oposition.offsetTop/MaxOpositionY;
+                   /* 4大图应该走的距离 */
+                   obigImg.style.left=-MaxbigMaxX*percentX+"px";
+                   obigImg.style.top=-MaxbigMaxY*percentY+"px";
+                     }
+            }
+            olittle.onmouseout=function(){
+                oposition.style.display="none";
+                obig.style.display="none";
+
+            }
+           
+
+
+        
+        
+        </script>
+    </div>
+    
+</body>
+</html>
