@@ -1,0 +1,49 @@
+<!--当小球按下后，鼠标移动，小球跟着移动,拼图-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .ball{
+            width: 30px;
+            height: 30px;
+            background-color: #408080;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="ball" id="ball"></div>
+    <div class="ba" id="ba"></div>
+    <script>
+        var ba=document.getElementById("ball");
+        var oball=document.getElementById("ball");
+        oball.onmousedown=function(e){      /*某个鼠标按键被按下*/
+            var ballX=e.clientX-oball.offsetLeft;
+            var ballY=e.clientY-oball.offsetTop;
+            console.log(ballX,ballY);
+            document.onmousemove=function(e){   /*鼠标移动*/
+                oball.style.left=e.clientX-ballX+"px";
+                oball.style.top=e.clientY-ballY+"px";
+                console.log(oball.style.left, oball.style.top);
+
+            }
+            document.onmouseup=function(){
+                document.onmousemove=null;
+            }
+        }
+      
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!--只要鼠标出现在文档中，小球就跟着移动-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        .ball{
+            width: 30px;
+            height: 30px;
+            background-color: #408080;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="ball" id="ball"></div>
+    <script>
+        var oball=document.getElementById("ball");
+        oball.onmousedown=function(e){      /*某个鼠标按键被按下*/
+            var ballX=e.clientX-oball.offsetLeft;
+            var ballY=e.clientY-oball.offsetTop;
+            console.log(ballX,ballY);
+            document.onmousemove=function(e){   /*鼠标移动*/
+                oball.style.left=e.clientX-ballX+"px";
+                oball.style.top=e.clientY-ballY+"px";
+                console.log(oball.style.left, oball.style.top);
+
+            }
+            document.onmouseup=function(){ /*鼠标按键被松开*/
+                oball.onmousemove=null;
+
+            }
+        }
+      
+    
+    </script>
+    
+</body>
+</html>
