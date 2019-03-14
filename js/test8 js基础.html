@@ -122,7 +122,7 @@
     document.write('<br>');
     document.write(obj1.name);
     document.write(obj1.age);*/
-    var  obj1={
+    /*var  obj1={
             name:"q",
             age:15,
         };
@@ -133,7 +133,130 @@
           document.write(p+":"+obj2[p]+"<br>");
     }
     obj2.name="a";
-    document.write(obj1.name);
+    document.write(obj1.name);*/
+   
+   /*  var random=function(low,high){
+        return Math.ceil(Math.random()*(high-low)+low);
+
+    }
+    document.write(random(8,10)); */
+    /*var now1 =new Date();/*当前时间*/
+    
+    /*var start=now1.getTime();
+    var t=0;
+    for(var i=1;i<1000000;i++)
+    {	
+        t++;
+    }
+    var now2=new Date();
+    var end=now2.getTime();
+    document.write(end-start);*/
+    /* for(var x=1;x=6;x+=1){
+        document.write(1);
+    } */
+   /*  var x=0;
+    for(x+=1;x<6;x=1){
+        document.write(1);
+    } */
+    /* n! */
+    
+   /* function factorial(n){
+        if(isNaN(n))
+        {
+            return "输入错误";
+
+        }
+        else{
+            var number=1;
+            for(var i=2;i<=n;i++)
+            {
+                number=number*i;
+            }
+            return number;
+        }
+       
+
+    }
+     var number=prompt("number");
+    document.write(factorial(number));*/
+   /*  function factorial(n){
+        if(isNaN(n))
+        {
+            return "输入错误";
+
+        }
+        else{
+            var number=1;
+           if(n==1){
+               return 1;
+           }
+           else{
+            return n*factorial(n-1);
+
+           }
+        
+        }
+       
+
+    }
+     var number=prompt("number");
+    document.write(factorial(number));
+    */
+     /*1！+2！++++n!*/
+    /*  function num(n){
+         for(var i=1;i<=n;i++ )
+            {
+                for(var j=1;j<=i;j++){
+                    document.write(j+"&nbsp;&nbsp;");
+                }
+                document.write("<br/>");
+
+            }
+
+
+     }
+    num(101); */
+    /* function star(n){
+         for(var i=1;i<=n;i++ )
+            {
+                for(var k=1;k<n-i;k++)
+                {
+                    document.write("&nbsp;");
+                }
+                for(var j=1;j<=i;j++){
+                    document.write("*"+"&nbsp;");
+                } 
+                document.write("<br/>");
+            }
+
+
+     }
+    star(5);  */
+    /* 函数的嵌套 */
+ /*    function fn1(){
+        function fn2(){
+            var a=5;
+            return a;
+        }
+       return fn2();
+    }
+    document.write(fn1()); */
+   /*  function a(b){
+        document.write("a");
+        b(function(){
+            document.write("q");
+        });
+
+    }
+    a(function(c){
+        document.write("s");
+        c();
+    }); */
+    (function(){
+        document.write(123);
+    })();
+
+   
 
     
     </script>
