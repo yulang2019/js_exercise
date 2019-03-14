@@ -82,7 +82,7 @@
     a=6;
     document.write(b+"<br>");
     document.write(a);  */ 
-    var  obj1={
+   /* var  obj1={
         Name:"xx",
         Age:15,
     };
@@ -94,7 +94,46 @@
     obj1.Name="a1";
     for(var i in obj2){
     document.write(i+"2:"+obj2[i]+"<br>");
+    }*/
+    /* var  obj1={
+            name:"xx",
+            age:15,
+        };
+    var obj2=obj1;
+    obj1.name="a1";
+    document.write(obj2.name); */
+    /* var  obj1={
+            name:"xx",
+            age:15,
+        };
+    var obj2=obj1;
+    obj2.name="a112";
+    document.write('<br>');
+    document.write(obj1.name);
+    */
+    /*var  obj1={
+            name:"xx",
+            age:15,
+        };
+    var obj2=new Object();
+    obj2.name=obj1.name;
+    obj2.name="a2";
+    obj2.age=obj1.age;
+    document.write('<br>');
+    document.write(obj1.name);
+    document.write(obj1.age);*/
+    var  obj1={
+            name:"q",
+            age:15,
+        };
+    var obj2=new Object();
+    for(var p in obj1)
+    {
+          obj2[p]    =obj1[p];
+          document.write(p+":"+obj2[p]+"<br>");
     }
+    obj2.name="a";
+    document.write(obj1.name);
 
     
     </script>

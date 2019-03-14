@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>垂直导航菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            border: 3px solid #408080;
+            width: 150px;
+            margin: 100px auto;
+        }
+        li{
+            list-style: none;
+        }
+        h3{
+            background-color: #808080;
+            cursor: pointer;
+        }
+        ul{    
+            display: none;
+            
+        }
+        .common{
+            display: block;
+        }
+
+      
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="itemA" id="itemA">管理区</h3>
+        <ul class="one" id="one">
+            <li>a02</li>
+            <li>a03</li>
+            <li>a04</li>
+        </ul>
+        <h3 class="itemB" id="itemB">交流区</h3>
+        <ul class="two" id="two">
+            <li>b02</li>
+            <li>b03</li>
+            <li>b04</li>
+        </ul>
+       
+    </div>
+
+    <script>
+        var aH3 = document.getElementsByTagName('h3');
+        var aUl = document.getElementsByTagName('ul');
+
+        // var flag = false;   //false 代表隐藏    true代表显示 
+        for(var i=0; i<aH3.length; i++){ 
+            aH3[i].index = i;
+            aH3[i].flag = false; //false 代表隐藏    true代表显示 
+            aH3[i].onclick = function(){
+                var oUl = aUl[this.index];
+                // 如果 this.flag 值为true 代表当前是显示的  
+                if(this.flag){  
+                    //让他隐藏
+                    oUl.style.display = "none";
+                }else{
+                    oUl.style.display = "block";
+                }
+                this.flag = !this.flag;
+            }
+        }
+        www.kristen12.comork.html
+    
+    </script>
+    
+</body>
+</html>
