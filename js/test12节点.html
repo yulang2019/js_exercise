@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="container">
+        <li id="aa">1</li>
+        <li id="bb">2</li>
+    </ul>
+    <!-- <script>
+        //下一个节点
+        var oLi=document.getElementById("bb");
+        function next(elem){
+            do{
+                elem=elem.nextSibling;
+            }while(elem&&elem.nodeType!=1);//元素不能为null（有效值）且元素节点类型=1
+            return elem;/*返回下一个节点*/
+        }
+        var onext=next(oLi);
+        document.write(onext);
+        onext.style.background="green";
+    </script> -->
+     <script>
+         var oLi=document.getElementById("aa");
+         function last(elem){
+             do{
+                 elem=elem.previousSibling;
+
+             }while(elem&&elem.nodeType!=1);
+             return elem;
+
+         }
+         var olast=last(oLi);
+         document.write(olast);
+         olast.style.background="red";
+    </script>
+    
+</body>
+</html>
