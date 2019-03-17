@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+            margin: 100px auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #808080;
+        }
+        li{
+            background-color: #004040;
+            margin-bottom:10px;
+            cursor: pointer;
+        }
+    
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <!-- <script>
+        var oLi=document.getElementsByTagName("li");
+        for(var i=0;i<oLi.length;i++){
+            oLi[i].index=i;
+            oLi[i].onclick=function(){
+               console.log(this.index);
+               console.log(oLi[this.index]);
+            }
+
+        }
+    </script> -->
+
+   <!--  <script>
+          // 函数的立即调用
+        // (function(){
+
+        // })()
+         var oLi=document.getElementsByTagName("li");
+         for(var i=0;i<oLi.length;i++){
+             (function(t){
+                 oLi[t].onclick=function(){
+                    console.log(t);
+                    console.log(oLi[t]);
+                 }
+             })(i);
+         }
+    </script> -->
+    <script>
+       /*    function a(){
+            var x = 10;
+            return function(){
+                x++;
+                console.log(x);
+            }
+        }
+
+       var b =  a();
+       b();
+       b();
+ */
+    function a(){
+            var t=1;
+           return function (){
+                t++;
+                console.log(t);
+            }
+        }
+        var b=a();
+        b();//2，只调用内部函数
+        b();//3
+        b();//4
+        a()();//2 每次都先调用外部函数，后调用内部函数
+        a()();//2
+        a()();//2因为每次调用时a中的t都重新设置为1
+    
+    
+    </script>
+    
+</body>
+</html>
