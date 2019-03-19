@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .div{
+            width: 200px;
+            height: 200px;
+            background-color: #408080;
+            cursor: pointer;
+        }
+        .div1{
+            width: 50px;
+            height: 50px;
+            background-color: #004040;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="div" id="div">
+        <div class="div1" id="div1">2</div>
+    </div>
+    <script>
+        var odiv=document.getElementById("div");
+        var odiv1=document.getElementById("div1");
+        odiv.addEventListener('click',function(){
+            console.log("父元素事件捕获");
+
+        },true);
+        /*odiv1.addEventListener('click',function(){
+            console.log("子元素事件捕获");
+
+        },true);*/
+
+
+    
+    </script>
+
+    
+</body>
+</html>
