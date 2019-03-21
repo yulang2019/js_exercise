@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>History</title>
+</head>
+<body>
+    <input type="button" value="返回上一页" id="btn">
+    <script>
+        var obtn=document.getElementById("btn");
+        obtn.onclick=function(){
+            console.log(123);
+            history.back();//上一个URL
+            history.forward();//下一个
+            history.go(num);//上一个-1.下一个1
+        };
+    </script>
+    
+</body>
+</html>
