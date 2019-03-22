@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取元素的方法</title>
+</head>
+<body>
+    <div class="container" id="con">
+        <ul class="title" id="ti" name="ti1">
+            <li id="first" name="fir">1.essential极其重要的</li>
+            <li>2.environment:环境</li>
+            <li>3.eating home：饭店</li>
+            <li>4.chinese-style hotel:中式旅馆</li>
+            <li>5.purchase:购买</li>
+        </ul>
+        <div class="content" id="contact">contact:关系，联系</div>
+    </div>
+    <script>
+        //1.通过Id获取
+        var oContact=document.getElementById("contact");
+       console.log(oContact);
+       console.log(typeof (oContact));//object,没有取到返回null
+
+         //2.通过name属性获取,返回的是NodeList(类似于数组)，不能使用数组的方法
+       var ofirst=document.getElementsByName("ti1");
+       console.log(ofirst);//NodeList
+       console.log(ofirst[0]);//<ul>
+       console.log(ofirst[1]);//返回undifined
+
+       //3.通过标签名获取，返回的是HTMLCollection，不能使用数组的方法
+       var oLi=document.getElementsByTagName("li");
+       console.log(oLi);//HTMLCollection
+       console.log(oLi[0]);//<li id="first" name="fir">1.essential极其重要的</li>
+     //4.通过class名获取元素,返回的是HTMLCollection，不能使用数组的方法
+      var oContent=document.getElementsByClassName("content");
+      console.log(oContent);//HTMLCollection
+       console.log(oContent[1]);
+      
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        fieldset{
+            margin: 100px auto;
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>请填写表单</legend>
+        <form action="">
+            <label for="name">姓名</label><input type="text" id="name"><br>
+            <label for="sex">性别</label><input type="radio" name="sex" id="sex">男
+            <input type="radio"  name="sex"  >女<br>
+            <label for="age">年龄</label><input type="text" id="age"><br>
+            <label for="id">身份证号码</label><input type="text" id="id"><br>
+            <label for="faviate">爱好</label><input type="checkbox" name="faviate" id="faviate">篮球
+            <input type="checkbox"  name="faviate">游泳<br>
+                <input type="button" value="登录">
+        </form>
+    </fieldset>
+    <script>
+        var oName=document.getElementById("name");
+        oName.onfocus=function(){//获得焦点
+            console.log("red");
+            oName.style.backgroundColor="red";
+        }
+        oName.onblur=function(){//失去焦点
+            oName.style.backgroundColor="blue"
+        }
+
+       
+    </script>
+
+    
+</body>
+</html>
