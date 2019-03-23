@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+           padding: 0;
+           margin: 0;
+        }
+        .head{
+            width: 960px;
+            height: 100px;;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 100px;
+            background-color: #bdb7b7;
+            clear: both;
+        }
+        .center{
+            width:960px;/**/
+            margin:0 auto;
+            background-image: url('../../img/01.jpg');
+            background-size:100%;
+            height:540px;
+        }
+      
+        .left{
+            width: 630px;
+            height: 300px;
+            background-color: #4888a5;
+           float: left;
+           display: table; 
+          
+        }
+        .right{
+            width: 300px;
+            height: 300px;
+            background-color: #6f587c;
+            float: right;
+            display: table;
+        }
+        .content{
+            width: 960px;
+           margin: 0 auto;
+            height: 300px;
+        }
+        p{
+            display: table-cell;
+            vertical-align: middle;
+
+        }
+
+        @media screen and (max-width:960px){
+            .head{
+                width: 100%;
+            }
+            div.center{
+                height:0px;
+                padding-top:56%;
+                background-image: url('../../img/01_s_2x.jpg');
+               
+        
+            }
+            .content{
+                width: 100%;
+            }
+            .right{
+                width: 33%;
+            }
+            .left{
+                width: 66%;
+            }
+          
+        }
+        @media screen and (max-width:480px){
+            .content{
+                width: 100%;
+            }
+            .center{
+                background: url(../../img/01_s.jpg);
+            }
+            .right,.left{
+                width: 100%;
+            }
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">页头</div>
+        <div class="head">标题</div>
+        <div class="center">
+            22
+        </div>
+
+        <div class="content">
+            <div class="left"> 
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    Donec dolor arcu, interdum sed turpis faucibus, placerat ultricies felis. Donec pulvinar gravida rhoncus. Suspendisse vestibulum est eget dolor lobortis.
+                </p>
+            </div>
+        </div>
+        <div class="head">标题</div>
+
+    </div>
+    
+</body>
+</html>
