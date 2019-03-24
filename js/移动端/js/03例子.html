@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            touch-action: none;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+           
+        } 
+        .page-1{
+            width: 100%;
+            height: 100%;
+            background-color: #083846;
+            position: relative;
+        }
+        #headImg{
+            width: 248px;
+            position: absolute;
+            top:10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: movetop .5s ease-out forwards;
+        }
+        #buttomImg{
+            width: 40%;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: moveleft .5s ease-out forwards ;        
+        }
+        #navImg{
+            width: 20px;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            margin-left: -10px;
+            opacity: 0;
+            animation: movenav 1s ease forwards infinite;
+        }
+        @-webkit-keyframes movetop{
+            0%{
+                transform: translate(-50%,-100%);
+            }
+        }
+        @-webkit-keyframes moveleft{
+            0%{
+                left: 0%;
+                animation-delay: 1s;
+
+            }
+        }
+        @-webkit-keyframes movenav{
+            0%{
+                opacity: 0;
+                bottom: 50px;
+            }
+            50%{
+                opacity: 1;
+                bottom: 60px;
+            }
+           100%{
+                opacity: 0;
+                bottom: 70px;
+
+           }
+        } 
+        /*first-page:end  */
+       /* page-2*/
+       .page-2{
+            width: 100%;
+            height: 100%;
+            background-color: #9261BF;
+            position: relative;
+        }
+        #sheadImg{
+            width: 158px;
+            position: absolute;
+            top:10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #sbuttomImg{
+            width: 210px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 36%;
+            z-index: 1;
+            animation: sleftmove .5s ease-out forwards ;       
+        }
+        #circleImg{
+            width: 240px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 30%;
+            animation: circletmove 2s ease-out forwards ;       
+        }
+        #developImg{
+            width: 142px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20%;
+            animation: developmove 1s ease-out forwards ;
+    
+        }
+        #floatingImg{
+            width: 248px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); 
+           
+            top: 7%;
+            animation: floatmove 1s ease  ;
+    
+
+        }
+        #dot1Img{
+            width: 20px;
+            position: absolute;
+            bottom: 90px;
+            left: 50%;
+            margin-left: -10px;
+           
+        }
+       
+        .moveToTop{
+        animation: moveToTop 1s ease forwards;
+        }
+        .moveToButtom{
+            animation: moveToButtom .8s ease forwards;
+
+        }
+        @keyframes moveToTop{
+            100%{
+                     transform: translateY(-100%);
+            }
+        }
+        @keyframes moveToButtom{/*page1和page2是重叠的，page-2先要在下面然后再到原来的位置*/
+            0%{
+                    transform: translateY(100%);
+            }
+            100%{
+                transform: translateY(-100%);
+            }
+
+        }
+
+        @-webkit-keyframes floatmove{
+            0%{
+                transform:translateX(-50%) scale(0.4);
+            }
+        }
+        @-webkit-keyframes developmove{
+            0%{
+                transform: scale()
+            }
+            100%{
+               
+            }
+        }
+        @-webkit-keyframes sleftmove{
+            0%{
+                transform: translateX(-100%);
+            }
+        }
+        @-webkit-keyframes circletmove{
+            0%{
+                top: 15%;
+
+            }
+             25%{
+                top: 30%;
+
+            } 
+            50%{
+                top: 15%;
+
+            }
+            100%{
+                top: 30%;
+
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!--first page-->
+      <div class="page-1">
+        <img id="headImg" src="img/cover.png" alt="">
+        <img id="buttomImg" src="img/wording_cover.png" alt="">
+        <img id="navImg" src="img/icon_up.png" alt="">
+    </div>  
+    <div class="page-2">
+            <img id="sheadImg" src="img/wording.png" alt="">
+            <img id="sbuttomImg" src="img/people.png" alt="">
+            <img id="circleImg" src="img/circle.png" alt="">
+            <img id="floatingImg" src="img/floating_develop.png" alt="">
+            <img id="developImg" src="img/check_develop.png" alt="">
+             <img id="dot1Img" src="img/dot1.png" alt="">
+            <img id="navImg" src="img/icon_up.png" alt="">
+        </div>  
+
+    <script src="jquery-1.12.4.js"></script>
+    <script src="zepto.js"></script>//
+    <script src="touch.js"></script>
+    <script>
+        var iNow=1;
+        $(document).on("swipeUp",function(){
+          /*  $(".page-1").addClass("hide");
+              $(".page-2").removeClass("hide");*/
+            $('.page-'+iNow).attr("class","page-"+iNow+" moveToTop");
+          /*   $(".page-"+iNow).attr('class','page-'+iNow+" "+'moveToTop'); */
+            $('.page-'+(iNow+1)).attr("class","page-"+(iNow+1)+" moveToButtom");
+         /*    $('page-'+(iNow+1)).attr('class','page-'+(iNow+1)+""+'moveToButtom'); */
+
+
+        }
+
+        ) 
+    </script>
+    
+</body>
+</html>
