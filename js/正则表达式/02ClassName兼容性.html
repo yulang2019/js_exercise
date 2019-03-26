@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="tt aa">1</li>
+        <li class="ttqw">3</li>
+    </ul>
+    <div class="tt">223</div>
+    <script>
+        var all=getElementsByClassName("tt");
+        function getElementsByClassName(className){
+            var reg=new RegExp('\\b'+className+"\\b");//有边界的字符
+            var result=[];//满足条件的标签
+             var allElements=document.getElementsByTagName("*");//获取所有的页面标签元素
+             for(var i=0;i<allElements.length;i++){
+                 /*或者if(reg.exec(allElements[i].className)!=null){*/
+                if(reg.test(allElements[i].className)){//返回true或者false;
+                    result.push(allElements[i]); //向result内添加满足条件的标签
+                 }
+             }
+             return result;
+        }
+        for(var j=0;j<all.length;j++){
+            all[j].style.backgroundColor="red";
+        }
+    </script>
+    
+</body>
+</html>
