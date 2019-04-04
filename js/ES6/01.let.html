@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>let</title>
+</head>
+<body>
+    <div class="div"></div>
+    
+    <script>
+       /*  var xx=1;
+        var obj={
+            xx:2,
+            say:()=>{
+                setTimeout(()=>{
+                    console.log(this.xx);
+                },100)
+            }
+        }
+        obj.say();
+         */
+       /*  function fn1(){
+             function fn2(){
+                console.log("a");
+            }
+            fn2();
+        }
+        fn1();
+ */
+    /* var a = [];
+    for (var i = 0; i < 10; i++) {
+        a[i] = function () {
+        console.log(i);
+         };
+    }
+    a[6](); // 10 */
+   /*  for (let i = 0; i < 3; i++) {
+        console.log(i);
+        let i = 'abc';
+        console.log(i);
+        } */
+        // abc// abc// abc
+       /*  for (let i = 0; i < 3; i++) {
+        let i = 'abc';
+        console.log(i);
+        } */
+        // abc// abc// abc
+       /*  const arr=[1,2,3];
+        var arr1=new Array();//地址修改
+        arr=arr1;//地址修改
+ */     
+       /*  let a=5;
+        let b=6;
+        let a=a+b;//11
+        let b=a-b;//5
+        let a=a-b;
+        let [a,b]=[b,a];
+        let [a, a=b]=[b,a];
+ */     
+     /*  let a=1;
+      let b=2;
+      a=[b,b=a][0];
+      console.log(a,b); */
+    /*   for (let i = 0; i < 10; i++) {
+        
+        }
+        console.log(i); */
+/* 
+         for (let i = 0; i < 3; i++) {
+        let i = 'abc';
+        console.log(i);
+        }  */
+       /*  for (let i = 0; i < 10; i++) {
+            // ...}
+            console.log(i);
+        // ReferenceError: i is not defined
+ */     
+        /*var a = [];
+        for (var i = 0; i < 10; i++) {
+        a[i] = function () {
+            console.log(i);
+        };
+        }
+        a[6](); // 10*/
+     /*    for (let i = 0; i < 2; i++) {
+            //let的作用域为{ },形成局部作用域
+            // ...
+         /*    let i=2; 
+            console.log(i);
+        }
+     /*    console.log(i); */
+
+    /*  var tmp = 123;
+        if (true) {
+        var tmp = 'abc'; // ReferenceError
+        let tmp; 
+       console.log(tmp);
+        }
+ */ 
+   /*  function bar(x = y, y = 2) {
+        console.log(x,y);
+         return [x, y];
+    }
+  bar(1); // 报错 */
+  /* let x;
+  x=x;
+ */
+ 
+ /* //不能在函数内部重新声明参数。
+function func(arg) {
+    let arg;
+    }
+    func() // 报错 */
+    /* let d="1";
+    console.log(`<div id="${d}">122</div>`);
+ */
+ var s = "𠮷";
+
+s.length // 2
+s.charAt(0) // ''
+s.charAt(1) // ''
+s.charCodeAt(0) // 55362
+s.charCodeAt(1) // 57271
+    </script>
+</body>
+</html>
