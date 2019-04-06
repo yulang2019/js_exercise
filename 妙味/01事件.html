@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+    }
+    .header{
+        position: relative;
+       width: 80px;
+        margin: 10px auto;
+        text-align: center;
+       
+    }
+    a{
+        background-color: #808080;
+        display: block;
+        color: #ff8000;
+        cursor: pointer;
+    }
+    ul{
+        position: absolute;
+        top:20px;
+        left: 0px;
+        display: none;
+        width: 100px;
+        background-color: #408080;
+    }
+
+</style>
+<body>
+        <li class="header" id="header">
+            <a href="#" id="weibo">微博</a>
+            <ul class="content"  id="content">
+                <li>私信</li>
+                <li>评论</li>
+                <li>@我</li>
+            </ul>
+        </li>
+<script>
+    var oheader=document.getElementById("header");
+    var oWeiBo=document.getElementById("weibo");
+    var oUl=document.getElementById("content");
+    oheader.onmouseover=function(){
+        oUl.style.display="block";
+
+    }
+    oheader.onmouseout=function(){
+        oUl.style.display="none";
+
+    } 
+
+</script>
+
+
+    
+</body>
+</html>
