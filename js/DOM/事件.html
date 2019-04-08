@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #child{
+            width: 100px;
+            height: 100px;
+            background-color: #808080;
+            cursor: pointer;
+        }
+        #father{
+            width: 200px;
+            height: 200px;
+            background-color: #004040;
+        }
+    </style>
+</head>
+<body>
+    <div id="father">
+        father
+        <div id="child">child</div>
+    </div>
+    <script>
+        var oDivf=document.querySelector("#father");
+        oDivf.onclick=function(e){
+            console.log(e.target);//e.target为子元素
+            console.log(this);//this为当前父元素
+        }
+        
+    </script>
+</body>
+</html>

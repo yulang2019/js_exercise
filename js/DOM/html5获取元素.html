@@ -1,0 +1,15 @@
+webpack.config.js
+
+const path=require('path');
+module.exports={
+    mode:'development',
+    entry:{                          //入口文件,源文件
+     'index':'./src/index.js',/*./代表当前路径 文件1*/ 
+     'index2':'./src/index.js'
+    },
+    output:{                           //打包文件 出口文件
+        path:path.resolve(_dirname,'dirt'),
+        filename:'[name].js'
+    }
+};
+  
